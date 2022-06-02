@@ -9,10 +9,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://kit.fontawesome.com/ae6465b2be.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
+<body  onload="startTime()">
   <nav class="light-green lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Logo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Glen Smith</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/resume.html">Resume</a></li>
         <li><a href="/video.html">Video</a></li>
@@ -30,10 +32,11 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <img class="responsive-img" src="img/glendev.png">
-      <h1 class="header center orange-text">Glen Smith | Web Developer</h1>
+      <img class="responsive-img" src="img/glen_smith.png">
+      <hr>
+      <h1 class="header center red-text">Glen Smith | Web Developer</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">This is my code sandbox bringing many of my web projects together. Don't just tease me tweet me with your thoughts.</h5>
       </div>
       <div class="row center">
         <a href="https://twitter.com/glenrockinsmith" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Twitter</a>
@@ -57,7 +60,7 @@
         
         </div>
 
-       
+  
 
         <div class="col s12 m6">
           
@@ -69,10 +72,13 @@
       </div>
 
     </div>
-    <br><br>
+<hr>
+<img class="responsive-img" src="img/glen-smith-developer.png">
+<hr>
+
   </div>
   
-  <footer class="page-footer light-green lighten-1 ">
+  <footer class="page-footer light-green lighten-1 center-align ">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -104,15 +110,38 @@
     <div class="footer-copyright">
       <div class="container">
       Site by <a class="orange-text text-lighten-3" href="https://rockandrollcanada.ca">Glen Smith</a>
+      <div id="txt"></div>
+      
+      <i class="fa-solid fa-mug-saucer fa-2x"></i>
+      <div>
+        <h5 class="center-align">This should be center aligned</h5>
       </div>
+    </div>
     </div>
   </footer>
 
 
   <!--  Scripts-->
+  
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
+  <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
   </body>
 </html>
