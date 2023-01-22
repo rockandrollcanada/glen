@@ -1,3 +1,3 @@
-# glen
+# Materialize css template
 
-## Glen Smith
+## customized by Glen Smith
