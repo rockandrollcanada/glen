@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Glen Smith | Web Developer</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="https://kit.fontawesome.com/ae6465b2be.js" crossorigin="anonymous"></script>
+
+</head>
+<body  onload="startTime()">
+  <nav class="light-green lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="/" class="brand-logo">Glen Smith</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/video.html">Video</a></li>
+        <li><a href="/webdev.html">Webdev</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="/resume.html">Resume</a></li>
+        <li><a href="/video.html">Video</a></li>
+        <li><a href="/webdev.html">Webdev</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <img class="responsive-img" src="img/glen_smith.png">
+      <hr>
+      <h1 class="header center red-text">Glen Smith | Web Developer</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">This is my code sandbox bringing many of my web projects together. Don't just tease me tweet me with your thoughts.</h5>
+      </div>
+      <div class="row center">
+        <a href="https://twitter.com/glenrockinsmith" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Twitter</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m6">
+         
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/A36kyaY_Miw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+        
+        </div>
+
+  
+
+        <div class="col s12 m6">
+          
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/qoeIZx2sWHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+        
+        </div>
+      </div>
+
+    </div>
+<hr>
+<img class="responsive-img" src="img/glen-smith-developer.png">
+<hr>
+
+  </div>
+  
+  <footer class="page-footer light-green lighten-1 center-align ">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="https://www.facebook.com/rockandrollcanada">Facebook</a></li>
+            <li><a class="white-text" href="https://twitter.com/glenrockinsmith">Twitter</a></li>
+            <li><a class="white-text" href="https://glensmith.ca/">Website</a></li>
+            <li><a class="white-text" href="https://rockandrollcanada.ca/">Rock and Roll Canada</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Site by <a class="orange-text text-lighten-3" href="https://rockandrollcanada.ca">Glen Smith</a>
+      <div id="txt"></div>
+      
+      <i class="fa-solid fa-mug-saucer fa-2x"></i>
+      <div>
+        <h5 class="center-align">This should be center aligned</h5>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+  </body>
+</html>
